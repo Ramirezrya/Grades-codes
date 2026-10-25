@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 24px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, #f0f4ff, #e7edff);
+  color: #1d2542;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.grade-card {
+  width: min(100%, 440px);
+  padding: 40px;
+  border: 1px solid #e3e8f6;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 20px 55px rgba(42, 57, 112, 0.12);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #596fc4;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(30px, 8vw, 38px);
+  letter-spacing: -0.04em;
+}
+
+.intro {
+  margin: 10px 0 30px;
+  color: #68718c;
+  line-height: 1.5;
+}
+
+.checker {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.grade-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #cbd3e8;
+  border-radius: 10px;
+  background: #fbfcff;
+  color: #1d2542;
+  font: inherit;
+  font-size: 16px;
+}
+
+.grade-input:focus {
+  border-color: #596fc4;
+  outline: 3px solid rgba(89, 111, 196, 0.17);
+}
+
+.check-button {
+  margin-top: 4px;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 10px;
+  background: #465db5;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.check-button:hover {
+  transform: translateY(-1px);
+  background: #364b9e;
+}
+
+.check-button:focus-visible {
+  outline: 3px solid #a8b7f3;
+  outline-offset: 3px;
+}
+
+.result {
+  min-height: 28px;
+  margin: 22px 0 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.result.passed {
+  color: #198754;
+}
+
+.result.failed {
+  color: #c0394b;
+}
+
+.passing-note {
+  margin: 8px 0 0;
+  color: #7a8299;
+  font-size: 13px;
+}
+
+@media (max-width: 480px) {
+  .grade-card {
+    padding: 30px 24px;
+  }
+}
